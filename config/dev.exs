@@ -5,10 +5,10 @@ config :smart_meal_plan, SmartMealPlan.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "smart_meal_plan_dev",
+  database: "smart_meal_plan",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+  pool_size: 40
 
 # For development, we disable any cache and enable
 # debugging and code reloading.

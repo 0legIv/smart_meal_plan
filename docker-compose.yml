@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  db:
+    image: "postgres:15.4-alpine"
+    container_name: smart_meal_plan
+    environment:
+      POSTGRES_DB: smart_meal_plan
+      POSTGRES_USER: ${DB_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres}
+    ports:
+      - "5432:5432"

@@ -13,7 +13,7 @@ defmodule SmartMealPlan.Application do
       {DNSCluster, query: Application.get_env(:smart_meal_plan, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: SmartMealPlan.PubSub},
       # Start the Finch HTTP client for sending emails
-      {Finch, name: SmartMealPlan.Finch},
+      {Finch, name: SmartMealPlanFinch},
       # Start a worker by calling: SmartMealPlan.Worker.start_link(arg)
       # {SmartMealPlan.Worker, arg},
       # Start to serve requests, typically the last entry
