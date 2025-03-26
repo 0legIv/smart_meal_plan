@@ -11,6 +11,9 @@
       </.link>
       now.
     </:subtitle>
+    <.link navigate={~p"/reset-password/new"} class="text-sm font-semibold">
+      Forgot your password?
+    </.link>
   </.header>
 
   <.simple_form :let={f} for={@changeset} as={:user} action={@action} phx-update="ignore">

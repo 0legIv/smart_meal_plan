@@ -64,7 +64,10 @@ config :phoenix, :json_library, Jason
 config :smart_meal_plan, :pow,
   web_module: SmartMealPlanWeb,
   user: SmartMealPlan.Users.User,
-  repo: SmartMealPlan.Repo
+  repo: SmartMealPlan.Repo,
+  extensions: [PowResetPassword, PowEmailConfirmation],
+  controller_callbacks: Pow.Extension.Phoenix.ControllerCallbacks,
+  mailer_backend: SmartMealPlanWeb.Pow.Mailer
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
